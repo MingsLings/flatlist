@@ -51,7 +51,7 @@ const personagens = [
     habilidade3: 'Habilidade 3, Estrelinha: Esquiva de ataques e causa dano de imapcto em inimigos ao segurar, realiza um corte giratório em volta de si ao soltar.'
   }, 
   {
-    id: 7,
+    id: 3,
     nome: 'Bruxa',
     hp: '3(4)',
     def: '5(6)',
@@ -72,6 +72,13 @@ const personagens = [
     hp: '5(6)',
     def: '5(6)',
     mana: '180(200)',
+    crtchan: '5',
+    dmg: '4',
+    spd: '6.5',
+    armini: 'Máquina de Bolhas Dormentes',
+    arminiimg: require('./assets/Dormant_Bubble_Machine.png'),
+    pass: 'Resistência à Veneno: Garante imunidade a dano venenoso e redução de velocidade. Garante dano extra de veneno à inimigos.',
+    imgpass: require('./assets/Buff_Poison.png'),
     img: require('./assets/Alchemist_0_art.png'),
   }
 ];
