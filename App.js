@@ -51,7 +51,7 @@ const personagens = [
     habilidade3: 'Habilidade 3, Estrelinha: Esquiva de ataques e causa dano de imapcto em inimigos ao segurar, realiza um corte giratório em volta de si ao soltar.'
   }, 
   {
-    id: 3,
+    id: 7,
     nome: 'Bruxa',
     hp: '3(4)',
     def: '5(6)',
