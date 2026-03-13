@@ -56,7 +56,23 @@ const personagens = [
     hp: '3(4)',
     def: '5(6)',
     mana: '240(260)',
+    crtchan: '0',
+    dmg: '3',
+    spd: '6.5',
+    armini: 'O Código',
+    arminiimg: require('./assets/The_Code.png'),
+    pass: 'Bastão Elemental: Projéteis elementais causam o dobro de dano em acertos críticos. Cajados causam dano aumentado.',
+    imgpass: require('./assets/Buff_Elemental_Staff.png'),
     img: require('./assets/Witch_0_art.png'),
+    imgh1: require('./assets/Skill_Lightning_Strike.png'),
+    habilidade1tit: 'Golpe de Raio',
+    habilidade1: 'Habilidade 1, Golpe de Raio: Lança um raio que causa dano e atordoa até 4 inimigos.',
+    imgh2: require('./assets/Skill_Piercing_Frost.png'),
+    habilidade2tit: 'Gelo Perfurante',
+    habilidade2: 'Habilidade 2, Gelo Perfurante: Cria paredes de gelo que causa dano e bloqueiam projéteis.',
+    imgh3: require('./assets/Skill_Firestorm.png'),
+    habilidade3tit: 'Tempestade de Fogo',
+    habilidade3: 'Habilidade 3, Tempestade de Fogo: Causa dano em uma grande área ao redor da personagem invocando 6 bolas de fogo.'
   }, 
   {
     id: 4,
@@ -64,7 +80,23 @@ const personagens = [
     hp: '4(5)',
     def: '4(5)',
     mana: '180(200)',
+    crtchan: '10',
+    dmg: '5',
+    spd: '7.5',
+    armini: 'Lâmina Sangrenta',
+    arminiimg: require('./assets/Blood_Blade.png'),
+    pass: 'Refletir: Armas brancas refletem projéteis.',
+    imgpass: require('./assets/Buff_Reflect.png'),
     img: require('./assets/Assassin_0_art.png'),
+    imgh1: require('./assets/Skill_Dark_Blade.png'),
+    habilidade1tit: 'Lâmina Sombria',
+    habilidade1: 'Habilidade 1, Lâmina Sombria: Causa dano em uma linha à frente da personagem.',
+    imgh2: require('./assets/Skill_Doppelganger.png'),
+    habilidade2tit: 'Doppelgänger',
+    habilidade2: 'Habilidade 2, Doppelgänger: Cria uma cópia da personagem que ataca os inimigos.',
+    imgh3: require('./assets/Skill_Invisibility.png'),
+    habilidade3tit: 'Invisibilidade',
+    habilidade3: 'Habilidade 3, Invisibilidade: Torna-se invisível por um curto período de tempo, inimigos não conseguem te ver ou te atacar.'
   }, 
   {
     id: 5,
@@ -80,6 +112,15 @@ const personagens = [
     pass: 'Resistência à Veneno: Garante imunidade a dano venenoso e redução de velocidade. Garante dano extra de veneno à inimigos.',
     imgpass: require('./assets/Buff_Poison.png'),
     img: require('./assets/Alchemist_0_art.png'),
+    imgh1: require('./assets/Skill_Gas_Grenade.png'),
+    habilidade1tit: 'Granada de Gás',
+    habilidade1: 'Habilidade 1, Granada de Gás: Lança três granadas que criam nuvens venenosas, causando dano e redução de velocidade em inimigos dentro dela.',
+    imgh2: require('./assets/Skill_Elemental_Potions.png'),
+    habilidade2tit: 'Poções Elementais',
+    habilidade2: 'Habilidade 2, Poções Elementais: Atira poções de gás/fogo/gelo nesta ordem alternativamente que causam dano em área, começando com 2 cargas.',
+    imgh3: require('./assets/Skill_Concoction.png'),
+    habilidade3tit: 'Concoção',
+    habilidade3: 'Habilidade 3, Concoção: Cria uma poção que pode ser consumida para um efeito aleatório.'
   }
 ];
 
@@ -109,7 +150,7 @@ export default function App() {
         <Image source={require('./assets/Critical_Chance_Icon.png')}/>
         <Text style={styles.textoForte}>Chance de Crítico: <Text style={styles.textoNormal}>{item.crtchan}%</Text></Text>
         <Image source={require('./assets/Damage_Icon.png')}/>
-        <Text style={styles.textoForte}>Dano: <Text style={styles.textoNormal}>{item.dmg}</Text></Text>
+        <Text style={styles.textoForte}>Dano Desarmado: <Text style={styles.textoNormal}>{item.dmg}</Text></Text>
         <Image source={require('./assets/Movement_Speed_Icon.png')}/>
         <Text style={styles.textoForte}>Velocidade: <Text style={styles.textoNormal}>{item.spd}</Text></Text>
         <Image source={item.arminiimg} style={styles.habilidadeimagem}/>
