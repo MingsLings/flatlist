@@ -193,6 +193,30 @@ const personagens = [
     imgh3: require('./assets/Skill_Splash_And_Bash.png'),
     habilidade3tit: 'Pancada de Escudo',
     habilidade3: 'Habilidade 3, Pancada de Escudo: Recebe +2 de defesa enquanto o escudo estiver ativo, podendo liberar a habilidade para atirar o escudo e acertar inimigos à distância. O escudo regenera mana e armadura ao votlar.'
+  },
+  {
+    id: 9,
+    nome: 'Elfo',
+    hp: '5(6)',
+    def: '4(5)',
+    mana: '180(200)',
+    crtchan: '5',
+    dmg: '4',
+    spd: '6.5',
+    armini: 'Arco Ancião',
+    arminiimg: require('./assets/Ancient_Bow.png'),
+    pass: 'Carga: Diminui o tempo de carregamento de armas que precisam de carregamento.',
+    imgpass: require('./assets/Buff_Charge.png'),
+    img: require('./assets/Elf_0_art.png'),
+    imgh1: require('./assets/Skill_Focus_Fire.png'),
+    habilidade1tit: 'Foco de Fogo',
+    habilidade1: 'Habilidade 1, Foco de Fogo: Automaticamente mira em inimigos e dispara 3 flechas mágicas.',
+    imgh2: require('./assets/Skill_Arrow_Rain.png'),
+    habilidade2tit: 'Chuva de Flechas',
+    habilidade2: 'Habilidade 2, Chuva de Flechas: Dispara uma chuva de flechas que causa dano em área.',
+    imgh3: require('./assets/Skill_Guardian_Elf.png'),
+    habilidade3tit: 'Elfo Guardião',
+    habilidade3: 'Habilidade 3, Elfo Guardião: Sumona um elfo guardião de um elemento entre fogo, gelo e ar para te auxiliar em combate.'
   }
 ];
 
@@ -213,29 +237,19 @@ export default function App() {
       <View style={styles.listaDetalhes}>
         
         <Text style={styles.textoForte}>Nome: <Text style={styles.textoNormal}>{item.nome}</Text></Text>
-        <Image source={require('./assets/Health_Icon.png')}/>
-        <Text style={styles.textoForte}>HP: <Text style={styles.textoNormal}>{item.hp}</Text></Text>
-        <Image source={require('./assets/Armor_Icon.png')}/>
-        <Text style={styles.textoForte}>Defesa: <Text style={styles.textoNormal}>{item.def}</Text></Text>
-        <Image source={require('./assets/Energy_Icon.png')}/>
-        <Text style={styles.textoForte}>Mana: <Text style={styles.textoNormal}>{item.mana}</Text></Text>
-        <Image source={require('./assets/Critical_Chance_Icon.png')}/>
-        <Text style={styles.textoForte}>Chance de Crítico: <Text style={styles.textoNormal}>{item.crtchan}%</Text></Text>
-        <Image source={require('./assets/Damage_Icon.png')}/>
-        <Text style={styles.textoForte}>Dano Desarmado: <Text style={styles.textoNormal}>{item.dmg}</Text></Text>
-        <Image source={require('./assets/Movement_Speed_Icon.png')}/>
-        <Text style={styles.textoForte}>Velocidade: <Text style={styles.textoNormal}>{item.spd}</Text></Text>
-        <Image source={item.arminiimg} style={styles.habilidadeimagem}/>
-        <Text style={styles.textoForte}>Arma Inicial: <Text style={styles.textoNormal}>{item.armini}</Text></Text>
-        <Image source={item.imgpass} style={styles.habilidadeimagem}/>
-        <Text style={styles.textoForte}>Passiva: <Text style={styles.textoNormal}>{item.pass}</Text></Text>
-        <Image source={item.imgh1} style={styles.habilidadeimagem}/>
-        <Text style={styles.textoForte}>Habilidade 1: <Text style={styles.textoNormal}>{item.habilidade1tit}</Text></Text>
-        <Image source={item.imgh2} style={styles.habilidadeimagem}/>
-        <Text style={styles.textoForte}>Habilidade 2: <Text style={styles.textoNormal}>{item.habilidade2tit}</Text></Text>
-        <Image source={item.imgh3} style={styles.habilidadeimagem}/>
-        <Text style={styles.textoForte}>Habilidade 3: <Text style={styles.textoNormal}>{item.habilidade3tit}</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Health_Icon.png')} style={{width: 20, height: 17}}/> HP: <Text style={styles.textoNormal}>{item.hp}</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Armor_Icon.png')} style={{width: 16, height: 20}}/> Defesa: <Text style={styles.textoNormal}>{item.def}</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Energy_Icon.png')} style={{width: 18, height: 18}}/> Mana: <Text style={styles.textoNormal}>{item.mana}</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Critical_Chance_Icon.png')} style={{width: 20, height: 17}}/> Chance de Crítico: <Text style={styles.textoNormal}>{item.crtchan}%</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Damage_Icon.png')} style={{width: 11, height: 20}}/> Dano Desarmado: <Text style={styles.textoNormal}>{item.dmg}</Text></Text>
+        <Text style={styles.textoForte}><Image source={require('./assets/Movement_Speed_Icon.png')} style={{width: 20, height: 13}}/> Velocidade: <Text style={styles.textoNormal}>{item.spd}</Text></Text>
+        <Text style={styles.textoForte}><Image source={item.arminiimg} style={styles.habilidadeimagem}/> Arma Inicial: <Text style={styles.textoNormal}>{item.armini}</Text></Text>
+        <Text style={styles.textoForte}><Image source={item.imgpass} style={styles.habilidadeimagem}/> Passiva: <Text style={styles.textoNormal}>{item.pass}</Text></Text>
+        <Text style={styles.textoForte}><Image source={item.imgh1} style={styles.habilidadeimagem}/> Habilidade 1: <Text style={styles.textoNormal}>{item.habilidade1tit}</Text></Text>
+        <Text style={styles.textoForte}><Image source={item.imgh2} style={styles.habilidadeimagem}/> Habilidade 2: <Text style={styles.textoNormal}>{item.habilidade2tit}</Text></Text>
+        <Text style={styles.textoForte}><Image source={item.imgh3} style={styles.habilidadeimagem}/> Habilidade 3: <Text style={styles.textoNormal}>{item.habilidade3tit}</Text></Text>
       </View>
+
 
     </TouchableOpacity>
   );
@@ -259,7 +273,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#181818',
-
     paddingTop: 50,
     paddingHorizontal: 10,
   },
@@ -286,9 +299,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   habilidadeimagem: {
-    width: 30,
+    width: 45,
     height: 45,
-    borderRadius: 8,
+    justifyContent: 'center',
+    borderRadius: 3,
   },
   listaDetalhes: {
     marginLeft: 15,
