@@ -217,6 +217,30 @@ const personagens = [
     imgh3: require('./assets/Skill_Guardian_Elf.png'),
     habilidade3tit: 'Elfo Guardião',
     habilidade3: 'Habilidade 3, Elfo Guardião: Sumona um elfo guardião de um elemento entre fogo, gelo e ar para te auxiliar em combate.'
+  },
+  {
+    id: 10,
+    nome: 'Lobisomem',
+    hp: '11(12)',
+    def: '1(2)',
+    mana: '120(140)',
+    crtchan: '5',
+    dmg: '5',
+    spd: '6.5',
+    armini: 'Garras Flamejantes',
+    arminiimg: require('./assets/Flaring_Claw.png'),
+    pass: 'Resistência à armadilhas: Garante imunidade a dano de armadilhas e dano de colisão.',
+    imgpass: require('./assets/Buff_Trap.png'),
+    img: require('./assets/Werewolf_0_art.png'),
+    imgh1: require('./assets/Skill_Berserk.png'),
+    habilidade1tit: 'Berserk',
+    habilidade1: 'Habilidade 1, Berserk: Quanto menor sua vida, maior sua velocidade de ataque por um curto período de tempo.',
+    imgh2: require('./assets/Skill_Blood_Thirst.png'),
+    habilidade2tit: 'Sede de Sangue',
+    habilidade2: 'Habilidade 2, Sede de Sangue: Ataca 4 vezes com as garras e recupera vida.',
+    imgh3: require('./assets/Skill_Devour.png'),
+    habilidade3tit: 'Devorar',
+    habilidade3: 'Habilidade 3, Devorar: Devora um inimigo para recuperar vida e mana.'
   }
 ];
 
